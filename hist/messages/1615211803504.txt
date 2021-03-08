@@ -1,0 +1,4 @@
+[{"fromUserName":"serverName","toUsername":"User2","message":"Вы авторизованы.\n Введите \\w !имя пользователя! !сообщение! для отправки личного сообщения.","messageType":"AUTH","responseCode":"OK"},
+{"message":"\u003cUser2\u003e подключился к чату","messageType":"INFO"},
+{"fromUserName":"User2","message":"asfd","messageType":"MESSAGE"},
+]

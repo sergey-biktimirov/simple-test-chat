@@ -1,0 +1,4 @@
+[{"message":"\u003cUser2\u003e подключился к чату","messageType":"INFO"},
+{"fromUserName":"User2","message":"asfd","messageType":"MESSAGE"},
+{"message":"\u003cUser2\u003e вышел из чата","messageType":"INFO"},
+]

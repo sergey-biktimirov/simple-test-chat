@@ -1,0 +1,48 @@
+plugins {
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.9'
+    id 'com.gluonhq.client-gradle-plugin' version '0.1.35'
+}
+
+compileJava.options.encoding = 'UTF-8'
+compileTestJava.options.encoding = 'UTF-8'
+
+repositories {
+    mavenCentral()
+    maven {
+        url 'https://nexus.gluonhq.com/nexus/content/repositories/releases'
+    }
+}
+
+mainClassName = 'ru.geekbrains.courses.sbiktimirov.javacore.proffesionallevel.lesson4.app.App'
+
+dependencies {
+    compile "com.gluonhq:charm-down-common:2.0.1"
+    compile "com.gluonhq:charm-down-desktop:2.0.1"
+    compile 'com.gluonhq:charm-glisten:6.0.6'
+    compile 'com.google.code.gson:gson:2.8.6'
+    compile 'org.xerial:sqlite-jdbc:3.34.0'
+    compile 'com.zaxxer:HikariCP:4.0.1'
+    compile 'commons-io:commons-io:2.6'
+}
+
+javafx {
+    version = '15.0.1'
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
+}
+
+gluonClient {
+    // target = 'ios' // Uncomment to enable iOS
+    // target = 'android' // Uncomment to enable Android
+    attachConfig {
+        version = "4.0.10"
+        services 'display', 'lifecycle', 'statusbar', 'storage'
+    }
+}
+
+run {
+
+    systemProperty "file.encoding", "utf-8"
+    systemProperty "gradle.encoding", "utf-8"
+
+}
